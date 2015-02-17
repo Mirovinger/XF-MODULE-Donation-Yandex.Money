@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright © 2015 CYBERSPACE Industries. All rights reserved.
+  Contacts: http://cyberspace.industries/
+  License: LICENSE.RUS.txt
+-->
+<addon addon_id="csiXF_donationYaMoney" title="(CSI/XF/MODULE) Пожертвование" version_string="1.0.6" version_id="7" url="http://cyberspace.industries/" install_callback_class="" install_callback_method="" uninstall_callback_class="" uninstall_callback_method="">
+  <admin_navigation/>
+  <admin_permissions/>
+  <admin_style_properties/>
+  <admin_templates/>
+  <admin_template_modifications/>
+  <code_events/>
+  <code_event_listeners/>
+  <cron/>
+  <email_templates/>
+  <email_template_modifications/>
+  <optiongroups>
+    <group group_id="csiXF_donationYaMoney" display_order="999999" debug_only="0"/>
+    <option option_id="csiXF_donationYaMoney_title" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[Пожертвование]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="1"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_announcement" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[Вы можете пожертвовать небольшую сумму денег, которая поможет развитию нашего проекта.]]></default_value>
+      <edit_format_params>rows=2</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="2"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_placeholder" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[Введите сумму...]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="3"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_submit" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[Пожертвовать]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="4"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_referer" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="5"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_receiver" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="6"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_formComment" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="7"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_shortDest" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[Пожертвование]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="8"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_targets" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[Пожертвование на развитие проекта]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="9"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_sumDefault" edit_format="spinbox" data_type="string" can_backup="1">
+      <default_value>0</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="10"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_sumPattern" edit_format="textbox" data_type="string" can_backup="1">
+      <default_value><![CDATA[^[1-9]\d*$]]></default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="11"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_needFio" edit_format="radio" data_type="string" can_backup="1">
+      <default_value>false</default_value>
+      <edit_format_params>true=Включить
+false=Отключить</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="12"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_needEmail" edit_format="radio" data_type="string" can_backup="1">
+      <default_value>false</default_value>
+      <edit_format_params>true=Включить
+false=Отключить</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="13"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_needPhone" edit_format="radio" data_type="string" can_backup="1">
+      <default_value>false</default_value>
+      <edit_format_params>true=Включить
+false=Отключить</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="14"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_needAddress" edit_format="radio" data_type="string" can_backup="1">
+      <default_value>false</default_value>
+      <edit_format_params>true=Включить
+false=Отключить</edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="15"/>
+    </option>
+    <option option_id="csiXF_donationYaMoney_faIcon" edit_format="onoff" data_type="boolean" can_backup="1">
+      <default_value>1</default_value>
+      <edit_format_params></edit_format_params>
+      <sub_options></sub_options>
+      <relation group_id="csiXF_donationYaMoney" display_order="16"/>
+    </option>
+  </optiongroups>
+  <permissions>
+    <permission_groups/>
+    <permissions/>
+    <interface_groups/>
+  </permissions>
+  <phrases>
+    <phrase title="csiXF_donationYaMoney_bankCard" version_id="3" version_string="1.0.2"><![CDATA[Банковская карта]]></phrase>
+    <phrase title="csiXF_donationYaMoney_yaMoney" version_id="3" version_string="1.0.2"><![CDATA[Яндекс.Деньги]]></phrase>
+    <phrase title="csiXF_donationYaMoney_cy" version_id="5" version_string="1.0.4"><![CDATA[руб.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_announcement" version_id="3" version_string="1.0.2"><![CDATA[Объявление]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_announcement_explain" version_id="7" version_string="1.0.6"><![CDATA[Введите текст объявления для сбора пожертвований. Объявление даёт понять отправителям на что собираются средства.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_formComment" version_id="3" version_string="1.0.2"><![CDATA[Название получателя]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_formComment_explain" version_id="3" version_string="1.0.2"><![CDATA[Название платежа в истории отправителя (до 50 символов). Мы рекомендуем формировать его из названий магазина и товара. Например, "Мой магазин: валенки белые".
+<br/>Если оставить поле пустым, то по умолчанию впишется стандартное название форума из настроек.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needAddress" version_id="3" version_string="1.0.2"><![CDATA[Запрашивать адрес проживания?]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needAddress_explain" version_id="3" version_string="1.0.2"><![CDATA[Запрос адреса проживания отправителя.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needEmail" version_id="3" version_string="1.0.2"><![CDATA[Запрашивать E-Mail?]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needEmail_explain" version_id="3" version_string="1.0.2"><![CDATA[Зарос электронной почты отправителя.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needFio" version_id="3" version_string="1.0.2"><![CDATA[Запрашивать ФИО?]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needFio_explain" version_id="3" version_string="1.0.2"><![CDATA[Запрос ФИО отправителя.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needPhone" version_id="3" version_string="1.0.2"><![CDATA[Запрашивать номер телефона?]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_needPhone_explain" version_id="3" version_string="1.0.2"><![CDATA[Запрос номера телефона отправителя.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_placeholder" version_id="3" version_string="1.0.2"><![CDATA[Подсказка]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_placeholder_explain" version_id="3" version_string="1.0.2"><![CDATA[Введите текст, который будет отображаться в пустом поле ввода средств.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_receiver" version_id="3" version_string="1.0.2"><![CDATA[Номер счёта]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_receiver_explain" version_id="3" version_string="1.0.2"><![CDATA[Номер счёта в Яндекс.Деньгах, на который нужно зачислять деньги отправителей.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_referer" version_id="3" version_string="1.0.2"><![CDATA[Адрес обратной страницы]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_referer_explain" version_id="3" version_string="1.0.2"><![CDATA[Укажите адрес страницы, на которую отправитель будет перенаправлен после отправки средств.
+<br/>Если оставить поле пустым, то по умолчанию впишется стандартный адрес форума из настроек.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_shortDest" version_id="3" version_string="1.0.2"><![CDATA[Название платежа]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_shortDest_explain" version_id="3" version_string="1.0.2"><![CDATA[Название платежа на странице подтверждения. Рекомендуем делать его таким же, как <em>название получателя</em>.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_submit" version_id="3" version_string="1.0.2"><![CDATA[Название кнопки]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_submit_explain" version_id="3" version_string="1.0.2"><![CDATA[Введите название кнопки для отправки средств.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_sumDefault" version_id="3" version_string="1.0.2"><![CDATA[Сумма по умолчанию]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_sumDefault_explain" version_id="3" version_string="1.0.2"><![CDATA[Введите сумму по умолчанию. Данная сумма будет автоматически вставляться в поле ввода средств при загрузке страницы.
+<br/>Если оставить поле пустым, то сумму должен будет указать сам отправитель.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_sumPattern" version_id="3" version_string="1.0.2"><![CDATA[Регулярное выражение суммы]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_sumPattern_explain" version_id="3" version_string="1.0.2"><![CDATA[Укажите регулярное выражение, согласно которому требуется вводить и проверять данные в поле суммы.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_targets" version_id="3" version_string="1.0.2"><![CDATA[Назначение платежа]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_targets_explain" version_id="3" version_string="1.0.2"><![CDATA[Укажите назначение платежа (до 150 символов).]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_title" version_id="3" version_string="1.0.2"><![CDATA[Заголовок]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_title_explain" version_id="3" version_string="1.0.2"><![CDATA[Введите заголовок блока пожертвований.]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_faIcon" version_id="6" version_string="1.0.5"><![CDATA[Использовать иконку валюты]]></phrase>
+    <phrase title="option_csiXF_donationYaMoney_faIcon_explain" version_id="6" version_string="1.0.5"><![CDATA[Укажите, нужно ли использовать иконку валюты из шрифта "Font Awesome" или можно обойтись простой текстовой надписью.]]></phrase>
+    <phrase title="option_group_csiXF_donationYaMoney" version_id="3" version_string="1.0.2"><![CDATA[(CSN-XF) Пожертвование]]></phrase>
+    <phrase title="option_group_csiXF_donationYaMoney_description" version_id="7" version_string="1.0.6"><![CDATA[Блок приёма пожертвований на развитие проекта при помощи "Яндекс.Деньги".]]></phrase>
+  </phrases>
+  <route_prefixes/>
+  <style_properties/>
+  <templates>
+    <template title="csiXF_donationYaMoney_sidebarBlock" version_id="5" version_string="1.0.4"><![CDATA[<xen:require css="csiXF_donationYaMoney_sidebarBlock.css" />
+
+<div class="section">
+  <div class="secondaryContent statsList">
+    <h3>{$xenOptions.csiXF_donationYaMoney_title}</h3>
+    <div class="pairsJustified">
+      <div class="csiXF_donationYaMoney csiXF_donationYaMoney_sidebarBlock">
+        <div class="csiXF_donationYaMoney_announcement">
+          {$xenOptions.csiXF_donationYaMoney_announcement}
+        </div>
+        <form method="post" action="https://money.yandex.ru/quickpay/confirm.xml">
+          <xen:if is="{$xenOptions.csiXF_donationYaMoney_referer}">
+            <input type="hidden" name="referer" value="{$xenOptions.csiXF_donationYaMoney_referer}" />
+          <xen:else />
+            <input type="hidden" name="referer" value="{$xenOptions.boardUrl}" />
+          </xen:if>
+          <input type="hidden" name="receiver" value="{$xenOptions.csiXF_donationYaMoney_receiver}" />
+          <xen:if is="{$xenOptions.csiXF_donationYaMoney_formComment}">
+            <input type="hidden" name="formcomment" value="{$xenOptions.csiXF_donationYaMoney_formComment}" />
+          <xen:else />
+            <input type="hidden" name="formcomment" value="{$xenOptions.boardTitle}" />
+          </xen:if>
+          <input type="hidden" name="short-dest" value="{$xenOptions.csiXF_donationYaMoney_shortDest}" />
+          <input type="hidden" name="quickpay-form" value="donate" />
+          <input type="hidden" name="targets" value="{$xenOptions.csiXF_donationYaMoney_targets}" />
+          <input type="hidden" name="writable-sum" value="true" />
+          <input type="hidden" name="need-fio" value="{$xenOptions.csiXF_donationYaMoney_needFio}" />
+          <input type="hidden" name="need-email" value="{$xenOptions.csiXF_donationYaMoney_needEmail}" />
+          <input type="hidden" name="need-phone" value="{$xenOptions.csiXF_donationYaMoney_needPhone}" />
+          <input type="hidden" name="need-address" value="{$xenOptions.csiXF_donationYaMoney_needAddress}" />
+          <span class="csiXF_donationYaMoney_formBody">
+            <span class="csiXF_donationYaMoney_formText">
+              <input type="number" name="sum" maxlength="10" value="{$xenOptions.csiXF_donationYaMoney_sumDefault}" data-type="number" pattern="{$xenOptions.csiXF_donationYaMoney_sumPattern}" class="textCtrl" placeholder="{$xenOptions.csiXF_donationYaMoney_placeholder}" required="required" />
+              <span>
+                <xen:if is="{$xenOptions.csiXF_donationYaMoney_faIcon}">
+                  <i class="fa fa-rub fa-2x fa-fw"></i>
+                <xen:else />
+                  {xen:phrase csiXF_donationYaMoney_cy}
+                </xen:if>
+              </span>
+            </span>
+            <span class="csiXF_donationYaMoney_formRadio">
+              <label for="ctrlPaymentType_yaMoney">
+                <input type="radio" name="paymentType" value="PC" id="ctrlPaymentType_yaMoney" checked="checked" /> {xen:phrase csiXF_donationYaMoney_yaMoney}
+              </label>
+              <label for="ctrlPaymentType_bankCard">
+                <input type="radio" name="paymentType" value="AC" id="ctrlPaymentType_bankCard" /> {xen:phrase csiXF_donationYaMoney_bankCard}
+              </label>
+            </span>
+            <span class="csiXF_donationYaMoney_formSubmit">
+              <input type="submit" name="submit-button" value="{$xenOptions.csiXF_donationYaMoney_submit}" class="button primary" />
+            </span>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>]]></template>
+    <template title="csiXF_donationYaMoney_sidebarBlock.css" version_id="5" version_string="1.0.4"><![CDATA[.csiXF_donationYaMoney .csiXF_donationYaMoney_announcement {
+  margin: 0 0 10px;
+  padding: 5px;
+  border-radius: 4px;
+  background: #d9edf7;
+  color: #31708f;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formBody {
+  text-align: center;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formBody * {
+  box-sizing: border-box;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formText {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formText input,
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formText span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formText input {
+  margin: 0;
+  padding-right: 5px;
+  width: 100%;
+  height: 34px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 16px;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formText span {
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #eee;
+  color: #555;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formRadio {
+  display: block;
+  margin: 10px 0;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formRadio label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formRadio label:last-child {
+  margin-right: 0;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formSubmit {
+  display: block;
+}
+
+.csiXF_donationYaMoney .csiXF_donationYaMoney_formSubmit input {
+}]]></template>
+  </templates>
+  <public_template_modifications>
+    <modification template="PAGE_CONTAINER" modification_key="csiXF_donationYaMoney_sidebarBlock" description="" execution_order="10" enabled="1" action="str_replace">
+      <find><![CDATA[{xen:raw $sidebar}]]></find>
+      <replace><![CDATA[<xen:include template="csiXF_donationYaMoney_sidebarBlock" />
+$0]]></replace>
+    </modification>
+  </public_template_modifications>
+  <bb_code_media_sites/>
+  <bb_codes/>
+</addon>
