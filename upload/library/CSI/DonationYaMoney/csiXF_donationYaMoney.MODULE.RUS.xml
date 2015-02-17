@@ -162,7 +162,7 @@ false=Отключить</edit_format_params>
     <phrase title="option_csiXF_donationYaMoney_title_explain" version_id="3" version_string="1.0.2"><![CDATA[Введите заголовок блока пожертвований.]]></phrase>
     <phrase title="option_csiXF_donationYaMoney_faIcon" version_id="6" version_string="1.0.5"><![CDATA[Использовать иконку валюты]]></phrase>
     <phrase title="option_csiXF_donationYaMoney_faIcon_explain" version_id="6" version_string="1.0.5"><![CDATA[Укажите, нужно ли использовать иконку валюты из шрифта "Font Awesome" или можно обойтись простой текстовой надписью.]]></phrase>
-    <phrase title="option_group_csiXF_donationYaMoney" version_id="8" version_string="1.0.7"><![CDATA[(CSI/XF) Пожертвование]]></phrase>
+    <phrase title="option_group_csiXF_donationYaMoney" version_id="8" version_string="1.0.7"><![CDATA[(CSI/XF/MODULE) Пожертвование]]></phrase>
     <phrase title="option_group_csiXF_donationYaMoney_description" version_id="7" version_string="1.0.6"><![CDATA[Блок приёма пожертвований на развитие проекта при помощи "Яндекс.Деньги".]]></phrase>
   </phrases>
   <route_prefixes/>
